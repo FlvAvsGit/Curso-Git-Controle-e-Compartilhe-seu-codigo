@@ -26,7 +26,7 @@ botaoAdicionar.addEventListener("click", function(event) {
 function obtemPacienteDoFormulario(form) {
 
     var paciente = {
-        nome: form.nome.value,
+        modelo: form.modelo.value,
         peso: form.peso.value,
         altura: form.altura.value,
         gordura: form.gordura.value,
@@ -40,7 +40,7 @@ function montaTr(paciente) {
     var pacienteTr = document.createElement("tr");
     pacienteTr.classList.add("paciente");
 
-    pacienteTr.appendChild(montaTd(paciente.nome, "info-nome"));
+    pacienteTr.appendChild(montaTd(paciente.modelo, "info-modelo"));
     pacienteTr.appendChild(montaTd(paciente.peso, "info-peso"));
     pacienteTr.appendChild(montaTd(paciente.altura, "info-altura"));
     pacienteTr.appendChild(montaTd(paciente.gordura, "info-gordura"));
@@ -61,8 +61,8 @@ function validaPaciente(paciente) {
 
     var erros = [];
 
-    if (paciente.nome.length == 0) {
-        erros.push("O nome não pode ser em branco");
+    if (paciente.modelo.length == 0) {
+        erros.push("O modelo não pode ser em branco");
     }
 
     if (paciente.gordura.length == 0) {
