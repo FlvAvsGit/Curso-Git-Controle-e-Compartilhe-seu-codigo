@@ -78,33 +78,29 @@
 			</section>
 		</main>
 
-		<br>
-			<select name="pessoa">
-			<option value="F">Pessoa Fisica
-			<option value="J">Pessoa Juridica
-			</select>
-		<br>	
+		
 
 		<section class="container">
 		    <h2 id="titulo-form">Adicionar novo paciente</h2>
 			<ul id="mensagens-erro"></ul>
-		    <form id="form-adiciona">
-		        <div class="">
+
+			<br>
+			<select name="pessoa">
+			<option value="F">Pessoa Fisica
+			<option value="J">Pessoa Juridica
+			</select>
+			<br><br>	
+		    
+			<form id="form-adiciona">
+		        <div class="grupo">
+		            <label for="documento">Documento:</label>
+		            <input id="documento" name="documento" type="text" placeholder="digite o numero do documento" class="campo campo-medio">
+		        </div>
+		        <div class="grupo">
 		            <label for="modelo">Modelo:</label>
-		            <input id="modelo" name="modelo" type="text" placeholder="digite o modelo de Score" class="campo">
+		            <input id="modelo" name="modelo" type="text" placeholder="digite o numero do modelo" class="campo campo-medio">
 		        </div>
-		        <div class="grupo">
-		            <label for="peso">Peso:</label>
-		            <input id="peso" name="peso" type="text" placeholder="digite o peso do seu paciente" class="campo campo-medio">
-		        </div>
-		        <div class="grupo">
-		            <label for="altura">Altura:</label>
-		            <input id="altura" name="altura" type="text" placeholder="digite a altura do seu paciente" class="campo campo-medio">
-		        </div>
-		        <div class="grupo">
-		            <label for="gordura">% de Gordura:</label>
-		            <input id="gordura" type="text" placeholder="digite a porcentagem de gordura do seu paciente" class="campo campo-medio">
-		        </div>
+		        
 
 		        <button id="adicionar-paciente" class="botao bto-principal">Adicionar</button>
 		    </form>
